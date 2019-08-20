@@ -19,8 +19,8 @@ namespace example_encrypt_pdf_dotnet
 
         // Encrypts a new PDF created from scratch
         // This code uses the DynamicPDF Generator for .NET product.
-        // Import the ceTe.DynamicPDF namespace for the Document and Page classes.
-        // Import the ceTe.DynamicPDF.Cryptography namespace for the Aes256Security class.
+        // Use the ceTe.DynamicPDF namespace for the Document and Page classes.
+        // Use the ceTe.DynamicPDF.Cryptography namespace for the Aes256Security class.
         private static void EncryptNewPDF()
         {
             //Create a Document object
@@ -39,12 +39,12 @@ namespace example_encrypt_pdf_dotnet
             document.Security = security;
 
             //Save Document
-            document.Draw("output.pdf");
+            document.Draw("output-new-pdf.pdf");
         }
 
         // Encrypts an existing PDF document
         // This code uses the DynamicPDF Merger for .NET product.
-        // Import the ceTe.DynamicPDF.Merger namespace for the MergeDocument class.
+        // Use the ceTe.DynamicPDF.Merger namespace for the MergeDocument class.
         private static void EncryptExistingPDF()
         {
             //Create a MergeDocument object with the existing PDF
@@ -59,7 +59,7 @@ namespace example_encrypt_pdf_dotnet
             document.Security = security;
 
             //Save document
-            document.Draw("outputFromExistingFile.pdf");
+            document.Draw("output-existing-pdf.pdf");
         }
 
         // This is a helper function to get a full path to a file in the Resources folder.
